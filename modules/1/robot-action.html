@@ -1,0 +1,550 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Robot Actuators and Effectors - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="Robots perform two main actions in the environment: locomotion and manipulation. Two main components are necessary:    Effectors: a device that is controlled by a robot and that affects the environment. A number of them are available, depending on the specific task, as shown in the four examples below.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Robot Actuators and Effectors">
+<meta property="og:url" content="/modules/1/robot-action.html">
+
+
+  <meta property="og:description" content="Robots perform two main actions in the environment: locomotion and manipulation. Two main components are necessary:    Effectors: a device that is controlled by a robot and that affects the environment. A number of them are available, depending on the specific task, as shown in the four examples below.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-25T02:02:49+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/1/robot-action.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Robot definition and components</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/robot-definition.html">Robot definition</a></li>
+          
+            <li><a href="/modules/1/robot-action.html" class="active">Robot actuators and effectors</a></li>
+          
+            <li><a href="/modules/1/robot-sensors.html">Robot sensors</a></li>
+          
+            <li><a href="/modules/1/robot-computer.html">Robot computation and communication</a></li>
+          
+            <li><a href="/modules/1/robot-design.html">Robot design</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - Robotics fundamental problems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/robot-problems.html">Robotic fundamental problems</a></li>
+          
+            <li><a href="/modules/2/models.html">Models</a></li>
+          
+            <li><a href="/modules/2/sensing.html">Sensing</a></li>
+          
+            <li><a href="/modules/2/planning.html">Planning</a></li>
+          
+            <li><a href="/modules/2/future-robotics.html">Future of robotics</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Robotics software architecture</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/robot-architecture.html">Robot architecture</a></li>
+          
+            <li><a href="/modules/3/reactive.html">Reactive control</a></li>
+          
+            <li><a href="/modules/3/deliberative.html">Deliberative control</a></li>
+          
+            <li><a href="/modules/3/hybrid.html">Hybrid control</a></li>
+          
+            <li><a href="/modules/3/middleware.html">Middleware</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Robot Actuators and Effectors">
+    <meta itemprop="description" content="Robots perform two main actions in the environment: locomotion and manipulation.Two main components are necessary:  Effectors: a device that is controlled by a robot and that affects the environment. A number of them are available, depending on the specific task, as shown in the four examples below.">
+    <meta itemprop="datePublished" content="2020-11-25T02:02:49+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Robot Actuators and Effectors
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Robots perform two main actions in the environment: <strong>locomotion</strong> and <strong>manipulation</strong>.
+Two main components are necessary:</p>
+<ul>
+  <li><strong>Effectors</strong>: a device that is controlled by a robot and that affects the environment. A number of them are available, depending on the specific task, as shown in the four examples below.</li>
+</ul>
+
+<figure class="image-container" style="">
+  
+<a title="NASA/JPL-Caltech / Public domain" href="https://commons.wikimedia.org/wiki/File:Mars_rovers_wheels_isometric.jpg"><img width="128" alt="Mars rovers wheels isometric" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mars_rovers_wheels_isometric.jpg/512px-Mars_rovers_wheels_isometric.jpg" /></a>
+
+  <figcaption>Wheels</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  
+<a title="JMiall / Public domain" href="https://commons.wikimedia.org/wiki/File:Caterpillar_track_shingle.JPG"><img width="112" alt="Caterpillar track shingle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Caterpillar_track_shingle.JPG/128px-Caterpillar_track_shingle.JPG" /></a>
+
+  <figcaption>Continuous track</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  
+<div style="position: relative; width: 130px; height: 85px; overflow: hidden ">
+<a title="David Buckley / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:2005-11-14_ShadowLeg_Finished_medium.jpg"><img width="256" alt="2005-11-14 ShadowLeg Finished medium" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/2005-11-14_ShadowLeg_Finished_medium.jpg/256px-2005-11-14_ShadowLeg_Finished_medium.jpg" style="position: absolute; top: -165px; left: 0px" /></a>
+</div>
+
+  <figcaption>Foot effector</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  
+<div style="position: relative; width: 130px; height: 85px; overflow: hidden ">
+ <a title="Richard Greenhill and Hugo Elias (myself) of the Shadow Robot Company / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:Shadow_Hand_Bulb_large.jpg"><img width="128" alt="Shadow Hand Bulb large" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Shadow_Hand_Bulb_large.jpg/256px-Shadow_Hand_Bulb_large.jpg" style="position: absolute; top: -35px; left: 0px" /></a>
+</div>
+
+  <figcaption>Hand</figcaption>
+</figure>
+
+<p>Wheels, continuous tracks, and feet are what make locomotion possible. Typically, they are arranged in such a way that the robot is statically stable, i.e., can stand still without falling. A robot is <strong>statically stable</strong> when the center of gravity (COG) is within the polygon determined by the contact points of the robot on the ground, also called <strong>polygon of support</strong>. The depiction of the contact points and the center of gravity for a robot is depicted on the right figure.</p>
+<figure class="image-container" style="">
+  <img src="/img/stability.png" alt="Contact points (blue) and COG (black/white) on a ROSbot 2.0." />
+  <figcaption>Contact points (blue) and COG (black/white) on a ROSbot 2.0.</figcaption>
+</figure>
+
+<p>A hand allows the robot to manipulate objects in the environment.</p>
+
+<ul>
+  <li><strong>Actuators</strong>: the mechanism that allows the effectors to execute an action. In particular, such devices can cause <strong>linear</strong> or <strong>rotary</strong> motion. They convert a control signal to either a speed or a force/torque.</li>
+</ul>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+  <figure>
+  <iframe src="https://www.youtube.com/embed/wMlDT17C_Vs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p>Some mechanisms are passive, i.e., they do not draw any energy from supplies such as battery and fuel, but they exploit the interaction with the environment. A notable example is the passive walker that relied on gravity to move over a slope. The natural swings of the legs without any motor makes such a mechanism very efficient. An intrinsic disadvantage is that such a robot can only work on downhill slopes <a class="citation" href="#collins2001three">(Collins et al., 2001)</a>, as shown in the video on the right.</p>
+
+  </div>
+</div>
+
+<p>Other mechanisms are <strong>active</strong> actuators, which, differently from passive actuators, require an energy source. There are many types of actuators, including photo-reactive, chemically reactive materials, piezoelectric materials. Actuators based on electric current (e.g., DC motor) and pressure changes (pneumatic) are two examples that can be commonly found in robots.</p>
+
+<figure class="image-container" style="">
+  
+<a title="Abnormaal / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:Electric_motor.gif"><img width="128" alt="Electric motor" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Electric_motor.gif" /></a>
+<a title="Dcaldero8983 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:DC_Motor.jpg"><img width="128" alt="DC Motor" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/DC_Motor.jpg/512px-DC_Motor.jpg" /></a>
+
+  <figcaption>DC motor</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  
+<div style="position: relative; width: 630px; height: 128px; overflow: hidden ">
+<a title="Kamarton / CC BY (https://creativecommons.org/licenses/by/3.0)" href="https://commons.wikimedia.org/wiki/File:Pneumatic_cylinder_(animation).gif"><img width="128" alt="Pneumatic cylinder (animation)" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Pneumatic_cylinder_%28animation%29.gif" style="transform: scale(0.35, 0.35); position: absolute; top: -180px; left: -30px;" /></a>
+<a title="JakeUM / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Underwater_Linear_Actuator.png"><img width="512" alt="Underwater Linear Actuator" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Underwater_Linear_Actuator.png/512px-Underwater_Linear_Actuator.png" style="transform: scale(0.4, 0.4); position: absolute; left: -80px;" /></a>
+</div>
+
+  <figcaption>Pneumatic actuator</figcaption>
+</figure>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  
+<a title="Zureks / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:PWM,_3-level.svg"><img width="192" alt="PWM, 3-level" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/PWM%2C_3-level.svg/512px-PWM%2C_3-level.svg.png" /></a>
+
+  <figcaption>PWM signal</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p>As many of the robots available to consumers use DC motors, it is useful to know how to control them through a computer which can send digital signals. A common way is to use a Pulse Width Modulation (PWM), a digital signal that can only be high (e.g., 5 Volts) or low (ground). The main idea is to change the time when the signal is high and low so that the average voltage is at the desired target. The graph on the right shows the actual signal sent in blue, and in red the corresponding average voltage.</p>
+
+  </div>
+</div>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  
+<a title="GregorDS / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:6DOF.svg"><img width="128" alt="6DOF" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/6DOF.svg/512px-6DOF.svg.png" /></a>
+
+  <figcaption>Six Degrees of Freedom</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p>Most simple actuators control a single <strong>degree of freedom</strong>. A degree of freedom represents a way in which an object can move. Two fundamental types of movement are:</p>
+<ul>
+  <li>translation, which can be broken down in 3 kind of movements – forward/backward (red), left/right (yellow), up/down (blue);</li>
+  <li>rotation, again split in 3 motions – roll (green), pitch (cyan), and yaw (orange).</li>
+</ul>
+
+  </div>
+</div>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  
+<a title="Jan Boddez / Public domain" href="https://commons.wikimedia.org/wiki/File:Inverse-kinematics-multiple-solutions.svg"><img width="128" alt="Inverse-kinematics-multiple-solutions" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Inverse-kinematics-multiple-solutions.svg/128px-Inverse-kinematics-multiple-solutions.svg.png" /></a>
+
+  <figcaption>Manipulator example</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p>The mechanical design of the robot and the actuators will determine the degrees of freedom of a robot. Rigid or flexible bodies – <strong>links</strong> –  may be connected together by <strong>joints</strong>. An example on how to represent a 2D manipulator with a fixed base to a flat surface with three joints and 4 links + the end effector is displayed on the right.<br />
+Having this knowledge is important then to study the possible motion of the robot without considering forces – <strong>kinematics</strong> – and explicitly modeling forces – <strong>dynamics</strong> <a class="citation" href="#spong2006robot">(Spong et al., 2006)</a>.</p>
+
+  </div>
+</div>
+
+<p>With the capability to act, the robot needs devices to sense the environment – topic we cover with the next unit on <a href="/modules/1/robot-sensors.html">Sensors</a>.</p>
+
+<div style="font-size:8px;">
+  <h3>References</h3>
+  
+<ol class="bibliography"><li><span id="collins2001three">Collins, S. H., Wisse, M., &amp; Ruina, A. (2001). A three-dimensional passive-dynamic walking robot with two legs and knees. <i>The International Journal of Robotics Research</i>, <i>20</i>(7), 607–615. [https://doi.org/10.1177%2F02783640122067561](https://doi.org/10.1177%2F02783640122067561)</span></li>
+<li><span id="spong2006robot">Spong, M. W., Hutchinson, S., &amp; Vidyasagar, M. (2006). <i>Robot modeling and control</i>. Wiley.</span></li></ol>
+
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-25T02:02:49+07:00">November 25, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/1/robot-definition.html" class="pagination--pager" title="Robot Definition
+">Previous</a>
+    
+    
+      <a href="/modules/1/robot-sensors.html" class="pagination--pager" title="Robot Sensors
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    <!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html -->
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+
+  </body>
+</html>

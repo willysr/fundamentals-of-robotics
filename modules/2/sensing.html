@@ -1,0 +1,611 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Sensing - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="We took a look at the models. In practice, the robot needs to sense the surrounding to purposefully act in the environment.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Sensing">
+<meta property="og:url" content="/modules/2/sensing.html">
+
+
+  <meta property="og:description" content="We took a look at the models. In practice, the robot needs to sense the surrounding to purposefully act in the environment.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-25T02:02:49+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/2/sensing.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Robot definition and components</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/robot-definition.html">Robot definition</a></li>
+          
+            <li><a href="/modules/1/robot-action.html">Robot actuators and effectors</a></li>
+          
+            <li><a href="/modules/1/robot-sensors.html">Robot sensors</a></li>
+          
+            <li><a href="/modules/1/robot-computer.html">Robot computation and communication</a></li>
+          
+            <li><a href="/modules/1/robot-design.html">Robot design</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - Robotics fundamental problems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/robot-problems.html">Robotic fundamental problems</a></li>
+          
+            <li><a href="/modules/2/models.html">Models</a></li>
+          
+            <li><a href="/modules/2/sensing.html" class="active">Sensing</a></li>
+          
+            <li><a href="/modules/2/planning.html">Planning</a></li>
+          
+            <li><a href="/modules/2/future-robotics.html">Future of robotics</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Robotics software architecture</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/robot-architecture.html">Robot architecture</a></li>
+          
+            <li><a href="/modules/3/reactive.html">Reactive control</a></li>
+          
+            <li><a href="/modules/3/deliberative.html">Deliberative control</a></li>
+          
+            <li><a href="/modules/3/hybrid.html">Hybrid control</a></li>
+          
+            <li><a href="/modules/3/middleware.html">Middleware</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Sensing">
+    <meta itemprop="description" content="We took a look at the models. In practice, the robot needs to sense the surrounding to purposefully act in the environment.">
+    <meta itemprop="datePublished" content="2020-11-25T02:02:49+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Sensing
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>We took a look at the <a href="/modules/2/models.html">models</a>. In practice, the robot needs to sense the surrounding to purposefully act in the environment.</p>
+
+<p>In general, achieving robust sensing is a difficult problem, because:</p>
+<ol>
+  <li>The sensing process might be indirect: it might not be possible to directly measure the quantity of interest. For estimating the traveled distance – process called odometry – for example, wheel encoders on wheeled robots are used to measure rotations, and then infer the location. We cannot directly measure location of the robot.</li>
+  <li>Sensor measurements are noisy.</li>
+  <li>Measurements may be intermittent.</li>
+</ol>
+
+<p>Let’s take a look at how sensor data can be used.</p>
+
+<h2 id="sensor-data-processing">Sensor data processing</h2>
+
+<p>Different sensors have different level of computation required. Readings from contact sensors and wheel odometry for example require simple conditional checks and math integration. Data from 3D LiDAR and cameras, instead, require high computation to extract the information about obstacles and to recognize objects, necessary for the robot to accomplish its task.
+We will briefly see what this processing entails for each reading from those sensors.</p>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  <img src="/img/lidar.gif" alt="Example of 3D point cloud from LiDAR." />
+  <figcaption>Example of 3D point cloud from LiDAR.</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<h3 id="3d-lidar">3D LiDAR</h3>
+<p>At each time step, a 3D LiDAR returns a 3D point cloud of a portion of the environment. The covered part of the environment depends on the horizontal and vertical field of view. The angular resolution determines the density of the point cloud.
+Raw data can be used to find the closest points. This information could be used to stop the robot for example.
+The 3D point cloud has much more information that can be extracted. Objects, like moving and parked cars, are visible to our eyes, as can be seen from the image on the right.
+Clustering techniques can be used to identify points that are part of the same object. Object classification can be performed by matching 3D models from a database.</p>
+
+  </div>
+</div>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  <a title="Comunidad de Software Libre Hackem [Research Group] / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Computer_vision_sample_in_Sim%C3%B3n_Bolivar_Avenue,_Quito.jpg"><img width="512" alt="Computer vision sample in Simón Bolivar Avenue, Quito" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Computer_vision_sample_in_Sim%C3%B3n_Bolivar_Avenue%2C_Quito.jpg/512px-Computer_vision_sample_in_Sim%C3%B3n_Bolivar_Avenue%2C_Quito.jpg" /></a>
+  <figcaption>Example of object recognition.</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<h3 id="cameras">Cameras</h3>
+<p>Camera images are data-heavy. A 1080p RGB camera has 1920x1080 pixels per each channel. Considering 30 frames per second, any software that process such images receives about 186 millions of values per second.
+What a robot needs though is not the full interpretation of the full images.
+From each image frame, computer vision techniques can be used to recognize objects. Many of the current methods rely on deep learning, thanks to its success in many domains, including recognizing pedestrians, cars, and traffic signs.
+Image frames can be used also to extract depth or egomotion with multiple views and/or stereo vision.</p>
+
+
+  </div>
+</div>
+
+<h2 id="state-estimation">State estimation</h2>
+
+<p>The information coming and processed from the sensors can be integrated over time to estimate the robot’ <strong>state</strong> and that of the surrounding. The state, as seen previously, is a set of quantities (e.g., position, orientation) that describes the robot’s motion over time and the obstacles in the environment.</p>
+
+<p>To achieve better sensing, information from multiple sensors can be combined together so that the robot has better information about the world. This process is called <strong>sensor fusion</strong>.</p>
+
+<p>The main techniques used to solve state estimation are based on <strong>probabilistic robotics</strong>.
+Depending on the available information and sensors, different subproblems can be identified.</p>
+
+<h3 id="localization">Localization</h3>
+
+<p>The <strong>localization</strong> problem looks at answering the question “where is the robot?”, given the sensor measurements and a map of the environment.
+Intuitively, given the state space, i.e., any location where the robot can be, the location on where the robot is can be represented as a probability distribution, also called <strong>belief</strong>.</p>
+
+<p>If the robot doesn’t know where it is initially, the problem is called <strong>global localization</strong>.
+The following short video depicts a global localization problem for a wheeled robot equipped with encoders, providing <strong>odometry</strong> information, and a sensor capable of detecting doors.</p>
+<figure>
+  <video controls="">
+    <source src="/img/localization.mp4" type="video/mp4" />
+    <track label="English" kind="subtitles" srclang="en" src="/img/localization.vtt" default="" />
+    Your browser does not support the video tag.
+  </video>
+</figure>
+
+<p>In general, even if localized, the robot needs to perform the same steps for continuously localizing. This problem is called <strong>tracking</strong>. The reason the same process needs to run is that sensors that can provide an estimate on the position, such as wheel odometry, are subject to <strong>drift</strong>. Wheels can have unequal wheel diameter, different contact points with the floor and variable friction which can lead to slipping. An example of drift for a wheeled robot is shown in the following video.</p>
+
+<figure>
+  <video controls="">
+    <source src="/img/odometry.mp4" type="video/mp4" />
+    <track label="English" kind="subtitles" srclang="en" src="/img/odometry.vtt" default="" />
+    Your browser does not support the video tag.
+  </video>
+</figure>
+
+<p>Exteroceptive sensors can correct such a drift. For example, with a prior knowledge of the map of the environment and with a LiDAR, corrections can be applied to the pose of the robot so that the current LiDAR reading matches with the map.
+Note to properly apply the correction to the pose of the robot, it is important to have the coordinate systems of the sensors and the robot body and their relation, as discussed in the previous unit. Encountering the same place and correcting the pose means to perform what is called <strong>loop closure</strong>. An example is shown in the figure below, where initially the robot has an angle offset and then aligning laser sensor measurements with the map allows the robot to correct its pose.</p>
+
+<figure class="image-container" style="">
+  <img src="/img/laser-before-after.png" alt="Drifted pose of the robot (left) corrected with the LiDAR (right)." />
+  <figcaption>Drifted pose of the robot (left) corrected with the LiDAR (right).</figcaption>
+</figure>
+
+<h3 id="mapping">Mapping</h3>
+
+<p>How can the robot determine how the world looks like? This is the <strong>mapping</strong> problem. Given its pose, the robot needs to use the sensor measurements to create a map of the environment.</p>
+
+<p>Consider for example a robot that can has location information, for example with GPS, but doesn’t have the map of the surrounding, e.g., the positions of the landmarks. The intuition behind the mapping process can be observed in the following video.</p>
+<figure>
+  <video controls="">
+    <source src="/img/mapping.mp4" type="video/mp4" />
+    <track label="English" kind="subtitles" srclang="en" src="/img/mapping.vtt" default="" />
+    Your browser does not support the video tag.
+  </video>
+</figure>
+
+<p>The map of the environment can be represented in different ways. Three basic types are the following:</p>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  <img src="/img/map-landmark.svg" alt="Landmark map." />
+  <figcaption>Landmark map.</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p><strong>Landmark or feature maps</strong>, which we have seen in the simple examples in the videos, are a vector of landmarks, typically represented with their pose in the environment. They are very useful as they have a compact representation. This allows an efficient update of the map. The chosen landmarks should be unique in the environment so that it is easy for the robot to recognize.</p>
+
+  </div>
+</div>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  <img src="/img/map-grid.png" alt="Grid map." />
+  <figcaption>Grid map.</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p><strong>Grid maps</strong> represent the environment with fixed-size shapes (e.g., cells), which can be either occupied, freespace, or unknown. The size of the cell is determined by the selected <strong>resolution</strong> of the grid. The higher the resolution, the more cells for representing an area. In general, the grid map requires more memory and might be not feasible to use for very large environments.</p>
+
+  </div>
+</div>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<figure class="image-container" style="">
+  <img src="/img/map-semantic.svg" alt="Topology map." />
+  <figcaption>Topology map.</figcaption>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p>A <strong>topology map</strong> connects objects and locations through a graph. An example is the interconnection between rooms. This can be useful to reduce the computation needed to reason on such a representation.</p>
+
+  </div>
+</div>
+
+<h3 id="simultaneous-localization-and-mapping">Simultaneous Localization and Mapping</h3>
+
+<p>If the robot doesn’t know where it is and how the world looks like, then the <strong>Simultaneous Localization and Mapping (SLAM)</strong> problem needs to be solved.
+For example, a robotic vacuum cleaner doesn’t have the map of the house when turned on for the first time. As initial location, a global reference frame is arbitrary set and its origin is where the robot started. As the robot moves it can map of the environment given the pose with respect to that global reference frame. An example for a robot with LiDAR is shown in the following video.</p>
+
+<figure>
+  <video controls="">
+    <source src="/img/slam.mp4" type="video/mp4" />
+    <track label="English" kind="subtitles" srclang="en" src="/img/slam.vtt" default="" />
+    Your browser does not support the video tag.
+  </video>
+</figure>
+
+<p>This is a “chicken and egg” problem, as for localizing a map is necessary, but for creating a map a pose is needed.</p>
+
+<h3 id="current-trends-in-slam---current-trends">Current trends in SLAM - current trends</h3>
+
+<p>A large part of the research community is working on this technology to make it more robust for robots to operate in any environment. In particular, there are some sensors/systems that are particularly of interest for many applications.</p>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+  <figure>
+  <iframe src="https://www.youtube.com/embed/Gh5pAT1o2V8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p><strong>Visual-Inertial Odometry/SLAM (VIO/VI-SLAM)</strong> systems have shown enormous success in a wide range of robotic applications including drone-based navigation, virtual and augmented reality, and autonomous driving. Visual and inertial sensors are low-cost, yet have accurate estimates due to their complementary sensing capabilities. Filtering and optimization based approaches are the two main categories to solve a visual-inertial navigation problem with open problems like efficient management of computational resources and failure recovery mechanisms. Recently, learning-based methods have also shown promising results making it an active research area. Though visual and inertial sensors are ubiquitous, there are certain requirements (some of them coming from sensory limitations), – for example, having sufficient illumination and preferably constant brightness, enough texture in the scene –  for VI-SLAM to work successfully.</p>
+
+  </div>
+</div>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+  <figure>
+  <iframe src="https://www.youtube.com/embed/jcKnb65wpWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe>
+</figure>
+
+
+  </div>
+  <div>
+    
+<p>Currently, <strong>LiDAR</strong> is used as the main sensor in Autonomous car navigation due to its capability of providing real-time accurate dense 3D model of the environment. Often times, IMU measurements are used to correctly align pointcloud generated by the high frequency LiDAR range measurements. However, LiDAR could be expensive, costing up to US$80,000 and yet the ability to detect objects could be affected  in the presence of fog or snow.</p>
+
+  </div>
+</div>
+
+<p>With the robot capable of localizing in the environment and having a sense of the surrounding, it can plan to achieve a task. Let’s take a look at how the robot can achieve <a href="/modules/2/planning.html">planning</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-25T02:02:49+07:00">November 25, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/2/models.html" class="pagination--pager" title="Physical models
+">Previous</a>
+    
+    
+      <a href="/modules/2/planning.html" class="pagination--pager" title="Planning
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    <!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html -->
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+
+  </body>
+</html>

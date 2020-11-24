@@ -1,0 +1,432 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Robot Computation and Communication - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="Several choices are available for the computation devices processing the data from the sensors and sending commands to the actuators. Laptops can be a first choice for a powerful platform easy to use. In practice, other considerations are important, including cost, power usage, and size. In self-contained robots, roboticists dedicate effort to configure embedded systems or small form factor computers, allowing for lower cost and power usage. Examples include those below. A microcontroller, like an Arduino Uno, can run one program at a time, over and over again, useful a single purpose, e.g., used for controlling motors. Others, like Raspberry Pi 4 and Intel NUC are full computers that can run as normal laptops. The difference is with CPU, memory, and other interfaces. Some of those embedded systems have also GPU capabilities, such as the NVIDIA Jetson Nano.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Robot Computation and Communication">
+<meta property="og:url" content="/modules/1/robot-computer.html">
+
+
+  <meta property="og:description" content="Several choices are available for the computation devices processing the data from the sensors and sending commands to the actuators. Laptops can be a first choice for a powerful platform easy to use. In practice, other considerations are important, including cost, power usage, and size. In self-contained robots, roboticists dedicate effort to configure embedded systems or small form factor computers, allowing for lower cost and power usage. Examples include those below. A microcontroller, like an Arduino Uno, can run one program at a time, over and over again, useful a single purpose, e.g., used for controlling motors. Others, like Raspberry Pi 4 and Intel NUC are full computers that can run as normal laptops. The difference is with CPU, memory, and other interfaces. Some of those embedded systems have also GPU capabilities, such as the NVIDIA Jetson Nano.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-25T02:02:49+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/1/robot-computer.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Robot definition and components</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/robot-definition.html">Robot definition</a></li>
+          
+            <li><a href="/modules/1/robot-action.html">Robot actuators and effectors</a></li>
+          
+            <li><a href="/modules/1/robot-sensors.html">Robot sensors</a></li>
+          
+            <li><a href="/modules/1/robot-computer.html" class="active">Robot computation and communication</a></li>
+          
+            <li><a href="/modules/1/robot-design.html">Robot design</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - Robotics fundamental problems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/robot-problems.html">Robotic fundamental problems</a></li>
+          
+            <li><a href="/modules/2/models.html">Models</a></li>
+          
+            <li><a href="/modules/2/sensing.html">Sensing</a></li>
+          
+            <li><a href="/modules/2/planning.html">Planning</a></li>
+          
+            <li><a href="/modules/2/future-robotics.html">Future of robotics</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Robotics software architecture</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/robot-architecture.html">Robot architecture</a></li>
+          
+            <li><a href="/modules/3/reactive.html">Reactive control</a></li>
+          
+            <li><a href="/modules/3/deliberative.html">Deliberative control</a></li>
+          
+            <li><a href="/modules/3/hybrid.html">Hybrid control</a></li>
+          
+            <li><a href="/modules/3/middleware.html">Middleware</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Robot Computation and Communication">
+    <meta itemprop="description" content="Several choices are available for the computation devices processing the data from the sensors and sending commands to the actuators. Laptops can be a first choice for a powerful platform easy to use. In practice, other considerations are important, including cost, power usage, and size. In self-contained robots, roboticists dedicate effort to configure embedded systems or small form factor computers, allowing for lower cost and power usage. Examples include those below. A microcontroller, like an Arduino Uno, can run one program at a time, over and over again, useful a single purpose, e.g., used for controlling motors. Others, like Raspberry Pi 4 and Intel NUC are full computers that can run as normal laptops. The difference is with CPU, memory, and other interfaces. Some of those embedded systems have also GPU capabilities, such as the NVIDIA Jetson Nano.">
+    <meta itemprop="datePublished" content="2020-11-25T02:02:49+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Robot Computation and Communication
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Several choices are available for the computation devices processing the data from the sensors and sending commands to the actuators. Laptops can be a first choice for a powerful platform easy to use. In practice, other considerations are important, including <strong>cost</strong>, <strong>power usage</strong>, and <strong>size</strong>. In self-contained robots, roboticists dedicate effort to configure embedded systems or small form factor computers, allowing for lower cost and power usage. Examples include those below. A microcontroller, like an Arduino Uno, can run one program at a time, over and over again, useful a single purpose, e.g., used for controlling motors. Others, like Raspberry Pi 4 and Intel NUC are full computers that can run as normal laptops. The difference is with CPU, memory, and other interfaces. Some of those embedded systems have also GPU capabilities, such as the NVIDIA Jetson Nano.</p>
+
+<figure class="image-container" style="">
+  <a title="SparkFun Electronics from Boulder, USA / CC BY (https://creativecommons.org/licenses/by/2.0)" href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_-_R3.jpg"><img height="128px" alt="Arduino Uno - R3" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" /></a>
+  <figcaption>Arduino Uno</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  <a title="Miiicihiaieil  Hieinizilieir / Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Side.jpg"><img height="128px" alt="Raspberry Pi 4 Model B - Side" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Raspberry_Pi_4_Model_B_-_Side.jpg/512px-Raspberry_Pi_4_Model_B_-_Side.jpg" /></a>
+  <figcaption>Raspberry Pi 4</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  <a title="Ubahnverleih / CC0" href="https://commons.wikimedia.org/wiki/File:Nvidia_Jetson_Nano_2_Development_Kit_15_14_39_352000.jpeg"><img height="128px" alt="Nvidia Jetson Nano 2 Development Kit 15 14 39 352000" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Nvidia_Jetson_Nano_2_Development_Kit_15_14_39_352000.jpeg/512px-Nvidia_Jetson_Nano_2_Development_Kit_15_14_39_352000.jpeg" /></a>
+  <figcaption>NVIDIA Jetson Nano</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  <a title="Laserlicht / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Intel_NUC6_inside.jpg"><img height="128px" alt="Intel NUC6 inside" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Intel_NUC6_inside.jpg/512px-Intel_NUC6_inside.jpg" /></a>
+  <figcaption>Intel NUC</figcaption>
+</figure>
+
+<p>Typically more than one computational device is present on the robot. In this way, various parts of the robot can be processed in <strong>parallel</strong>. <strong>Differentiation</strong> of work is one reason for multiple computational devices. For example, it is typical to have a micro-controller for the motors, to safely operate the robot in the environment, and another computer for processing sensor data. <strong>Redundancy</strong> can be another reason to have more than one computer. Computational power requirements depend on the sensor data to be processed and the software run on-board. Deep learning techniques require GPU capabilities. Clearly, the more computational power, the more heat and power consumption in the system.</p>
+
+<p>Communication systems might be necessary if there is a requirement that the robot communicates with a human operator for tele-operation or high-level supervision, or other robots. Different strategies are available and are drawn from the way devices are interconnected. The most straightforward way is to <strong>tether</strong> a robot for reliable tele-operation. However, that comes with the challenges of cable management. If the robot is not aware of that, it can easily become tangled, as shown in the example picture below of an underwater robot.
+Other solutions involve wireless solutions. A common solution is to use devices based on radio waves. Operating frequencies include 27 MHz or 49 MHz (RC), 900 MHz (radio), 2.4 GHz (IEEE 802.11 – common band for WiFi and Bluetooth). An example of WiFi interface is on the figure below on the right.).</p>
+
+<p>The choice depends on the amount of data to share and the distance to cover: the lower the frequency, the longer the line-of-sight distance between two communicating devices, but the lower the bandwidth. Some other media have been used. For example, light, e.g., infrared or green light. Acoustic modems are the typical communication for underwater environments.</p>
+
+<figure class="image-container" style="">
+  <img height="128" alt="Tethered Dartmouth BlueROV." src="/img/20200405_145405-dartmouth-bluerov-tether.jpg" />
+  <figcaption>Tether (in yellow) for an underwater robot.</figcaption>
+</figure>
+
+<figure class="image-container" style="">
+  <a title="AutolycusQ / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:ETRX357_ZigBee_module_with_size_ref.JPG"><img height="128" alt="ETRX357 ZigBee module with size ref" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/ETRX357_ZigBee_module_with_size_ref.JPG/512px-ETRX357_ZigBee_module_with_size_ref.JPG" /></a>
+  <figcaption>2.4 GHz radio communication module.</figcaption>
+</figure>
+
+<p>Now that we have seen all the hardware components of a robot, how do we design a robot? Let’s see the main characteristics that need to be considered – <a href="/modules/1/robot-design.html">Robot design</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-25T02:02:49+07:00">November 25, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/1/robot-sensors.html" class="pagination--pager" title="Robot Sensors
+">Previous</a>
+    
+    
+      <a href="/modules/1/robot-design.html" class="pagination--pager" title="Robot Design
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    <!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html -->
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+
+  </body>
+</html>

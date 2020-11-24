@@ -1,0 +1,505 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Robot Sensors - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="Sensors are devices to measure physical properties. They can be classified in two categories:    Proprioceptive: measure properties of the robot itself.   Exteroceptive: measure properties of the surrounding.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Robot Sensors">
+<meta property="og:url" content="/modules/1/robot-sensors.html">
+
+
+  <meta property="og:description" content="Sensors are devices to measure physical properties. They can be classified in two categories:    Proprioceptive: measure properties of the robot itself.   Exteroceptive: measure properties of the surrounding.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-25T02:02:49+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/1/robot-sensors.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Robot definition and components</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/robot-definition.html">Robot definition</a></li>
+          
+            <li><a href="/modules/1/robot-action.html">Robot actuators and effectors</a></li>
+          
+            <li><a href="/modules/1/robot-sensors.html" class="active">Robot sensors</a></li>
+          
+            <li><a href="/modules/1/robot-computer.html">Robot computation and communication</a></li>
+          
+            <li><a href="/modules/1/robot-design.html">Robot design</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - Robotics fundamental problems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/robot-problems.html">Robotic fundamental problems</a></li>
+          
+            <li><a href="/modules/2/models.html">Models</a></li>
+          
+            <li><a href="/modules/2/sensing.html">Sensing</a></li>
+          
+            <li><a href="/modules/2/planning.html">Planning</a></li>
+          
+            <li><a href="/modules/2/future-robotics.html">Future of robotics</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Robotics software architecture</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/robot-architecture.html">Robot architecture</a></li>
+          
+            <li><a href="/modules/3/reactive.html">Reactive control</a></li>
+          
+            <li><a href="/modules/3/deliberative.html">Deliberative control</a></li>
+          
+            <li><a href="/modules/3/hybrid.html">Hybrid control</a></li>
+          
+            <li><a href="/modules/3/middleware.html">Middleware</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Robot Sensors">
+    <meta itemprop="description" content="Sensors are devices to measure physical properties.They can be classified in two categories:  Proprioceptive: measure properties of the robot itself.  Exteroceptive: measure properties of the surrounding.">
+    <meta itemprop="datePublished" content="2020-11-25T02:02:49+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Robot Sensors
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Sensors are devices to measure physical properties.
+They can be classified in two categories:</p>
+<ol>
+  <li><strong>Proprioceptive</strong>: measure properties of the robot itself.</li>
+  <li><strong>Exteroceptive</strong>: measure properties of the surrounding.</li>
+</ol>
+
+<p>Another categorization is determined by whether they emit energy into the environment – <strong>active</strong>  sensors – or not – <strong>passive</strong> sensors.</p>
+
+<p>Here a number of passive proprioceptive sensors that are common in mobile robots.</p>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    <a title="Sidehack at English Wikibooks / Public domain" href="https://commons.wikimedia.org/wiki/File:Incremental_directional_encoder.gif"><img width="128" alt="Incremental directional encoder" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Incremental_directional_encoder.gif" /></a> <a title="Joao Paulo Chagas, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Rotary_encoder.jpg"><img width="96" alt="Rotary encoder" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Rotary_encoder.jpg" /></a>
+  </div>
+  <div>
+    <p>A rotary <strong>encoder</strong> provides <strong>rotation</strong> information, which can be used to determine displacement, velocity, or angle. Such a sensor, for example, is present on cars to measure the distance traveled.</p>
+
+  </div>
+</div>
+
+<hr />
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    
+<a title="SparkFun / CC BY (https://creativecommons.org/licenses/by/2.0)" href="https://commons.wikimedia.org/wiki/File:SparkFun_6DoF-IMU-Digital-Combo-Board_ITG3200%2BADXL345_10121-01d.jpg"><img width="128" alt="SparkFun 6DoF-IMU-Digital-Combo-Board ITG3200+ADXL345 10121-01d" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/SparkFun_6DoF-IMU-Digital-Combo-Board_ITG3200%2BADXL345_10121-01d.jpg" /></a>
+
+  </div>
+  <div>
+    
+<p><strong>Inertial Measurement Unit (IMU)</strong> is a proprioceptive sensor which provides <strong>angular velocity and linear acceleration</strong> measurements, which can be used to estimate the position and orientation of a robot. Micro Electro-Mechanical Systems (MEMS) IMUs have become very popular and widely used in electronics systems (e.g. mobile phone) due to their low-cost and light-weight. However, the measurements are corrupted by noises and biases.</p>
+
+  </div>
+</div>
+
+<hr />
+
+<div style="clear: both;">
+  <div style="width: 30%; float: right; margin-left: 1em;">
+    <a title="Éric Chassaing / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Geolocation.png"><img width="160" alt="Geolocation" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Geolocation.png/512px-Geolocation.png" /></a><a title="oomlout / CC BY-SA (https://creativecommons.org/licenses/by-sa/2.0)" href="https://commons.wikimedia.org/wiki/File:Adafruit_GPS_Module_Breakout.jpg"><img width="128" alt="Adafruit GPS Module Breakout" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Adafruit_GPS_Module_Breakout.jpg/512px-Adafruit_GPS_Module_Breakout.jpg" /></a>
+  </div>
+  <div>
+    <p><strong>Global Positioning System (GPS) sensor</strong> uses triangulation from satellites to determine <strong>geolocation and time</strong>. Usual errors for consumer GPS, deriving from, e.g., clock drift, are in the order of tens of meters. Poor GPS signal reception can happen in cities with tall buildings, because of shadowing and multipath effects.</p>
+
+  </div>
+</div>
+
+<p>Exteroceptive active sensors that measure distance to obstacles include:</p>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: left; margin-right: 1em;">
+    <a title="sleepisfortheweak / Public domain" href="https://commons.wikimedia.org/wiki/File:LIDARanim.gif"><img width="128" alt="LIDARanim" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/LIDARanim.gif" /></a><a title="APJarvis / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Velodyne_ProductFamily_BlueLens_32GreenLens.png"><img width="128" alt="Velodyne ProductFamily BlueLens 32GreenLens" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Velodyne_ProductFamily_BlueLens_32GreenLens.png/512px-Velodyne_ProductFamily_BlueLens_32GreenLens.png" /></a>
+  </div>
+  <div>
+    <p><strong>LiDAR (Light Detection and Ranging)</strong> sensor emits pulses of laser beams into the surroundings and measures the time for each pulse to bounce back to calculate the distance travelled. LiDAR creates real-time 3D representation of the environment both at day and night-time, possibly better at night without the interference of the sun.</p>
+
+  </div>
+</div>
+
+<hr />
+
+<div style="clear: both;">
+  <div style="width: 30%; float: left; margin-right: 1em;">
+    <a title="SparkFun / CC BY (https://creativecommons.org/licenses/by/2.0)" href="https://commons.wikimedia.org/wiki/File:Maxbotix_Ultrasonic-Range-Finder_LV-MaxSonar-EZ0.jpg"><img width="64" alt="Maxbotix Ultrasonic-Range-Finder LV-MaxSonar-EZ0" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Maxbotix_Ultrasonic-Range-Finder_LV-MaxSonar-EZ0.jpg" /></a><a title="Georg Wiora (Dr. Schorsch) / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" href="https://commons.wikimedia.org/wiki/File:Sonar_Principle_EN.svg"><img width="192" alt="Sonar Principle EN" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sonar_Principle_EN.svg/1000px-Sonar_Principle_EN.svg.png" /></a>
+  </div>
+  <div>
+    <p><strong>SONAR (Sound Navigation and Ranging)</strong> uses acoustic beams to create a map of the surrounding environment using the time-of-flight technique. Sonar is specifically useful for underwater exploration as sound waves travel farther than radar and light waves in water. There are different types of sonars – imaging sonar, mechanical scanning profiling sonar, echo-sounder etc.</p>
+
+  </div>
+</div>
+
+<hr />
+
+<div style="clear: both;">
+  <div style="width: 30%; float: left; margin-right: 1em;">
+    <a title="Hihiman / CC0" href="https://commons.wikimedia.org/wiki/File:Distance_Radar_DR-1DHP_61_GHz_Symeo.jpg"><img width="96px" alt="Distance Radar DR-1DHP 61 GHz Symeo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Distance_Radar_DR-1DHP_61_GHz_Symeo.jpg/512px-Distance_Radar_DR-1DHP_61_GHz_Symeo.jpg" /></a>
+  </div>
+  <div>
+    <p><strong>RADAR (RAdio Detection And Ranging)</strong> system emits radio waves which reflect back to the radar when they come into contact with any surrounding objects. Radar can measure the range from time-of-flight (similar to LiDAR) and speed of an object using Doppler shift.</p>
+
+  </div>
+</div>
+
+<p>Exteroceptive passive sensors are energy efficient because they measure natural emissions from the environment:</p>
+
+<div style="clear: both;">
+  <div style="width: 30%; float: left; margin-right: 1em;">
+    <div style="position: relative; width: 256px; height: 85px; overflow: hidden; float: left; "><a title="NASA/JPL-Caltech/MSSS/ASU" href="https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA16799"><img width="256" alt="Typical commercial color cameras." src="https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA16799_hires.jpg" style="position: absolute; bottom: -90px; left: 0px" /></a></div><a title="the Raspberry Pi Foundation / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Raspberry_Pi_Camera_Module_v2_with_ribbon.jpg"><img width="96" alt="Raspberry Pi Camera Module v2 with ribbon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Raspberry_Pi_Camera_Module_v2_with_ribbon.jpg/512px-Raspberry_Pi_Camera_Module_v2_with_ribbon.jpg" /></a>
+  </div>
+  <div>
+    <p><strong>RGB Camera</strong> is one of the cheapest, small, light-weight, and energy-efficient sensors. If it is configured as a pair, also called stereo camera, it can create a 3D map from a single stereo frame. The underlying assumption is that the environment has sufficient illumination with enough texture.</p>
+
+  </div>
+</div>
+
+<hr />
+
+<div style="clear: both;">
+  <div style="width: 30%; float: left; margin-right: 1em;">
+    <a title="Kinect_Sensor_at_E3_2010_(front).jpg: James Pfaff (litheon)
+derivative work: AlphathonTM (talk)
+Captions by Dancter (talk) (added to this version by AlphathonTM (talk)) / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:KinectSensor.png"><img width="192" alt="KinectSensor" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/KinectSensor.png/256px-KinectSensor.png" /></a>
+  </div>
+  <div>
+    <p><strong>RGB-D Camera</strong> provides per-pixel depth or distance from the camera along with the RGB image. RGB-D camera projects infrared light pattern onto the scene and calculates the depth information using the known projected pattern. However, it can only work indoors cause sunlight will washout the speckle pattern.</p>
+
+  </div>
+</div>
+
+<p>Sensors are <strong>not perfect</strong>: measurements are <strong>noisy</strong> – e.g., the distance measurement of a SONAR place in the same location can be different – and do not describe the whole environment. In addition, sensors cannot be modeled completely. As such, understanding the properties of the sensors is fundamental to explicitly model the uncertainty and not to let a robot fail in a real environment.</p>
+
+<p>How to process the data from the sensors and send commands to the actuators? Let’s see the <a href="/modules/1/robot-computer.html">computation devices</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-25T02:02:49+07:00">November 25, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/1/robot-action.html" class="pagination--pager" title="Robot Actuators and Effectors
+">Previous</a>
+    
+    
+      <a href="/modules/1/robot-computer.html" class="pagination--pager" title="Robot Computation and Communication
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    <!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html -->
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+
+  </body>
+</html>

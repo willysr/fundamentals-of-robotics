@@ -1,0 +1,406 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Deliberative control - Course 0: Fundamentals of Robotics</title>
+<meta name="description" content="While reactive control reacts to sensor data, a deliberative control senses first, plans, and then executes the plan. The output of each step becomes the input of the following step.">
+
+
+  <meta name="author" content="Your Name">
+  
+  <meta property="article:author" content="Your Name">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Course 0: Fundamentals of Robotics">
+<meta property="og:title" content="Deliberative control">
+<meta property="og:url" content="/modules/3/deliberative.html">
+
+
+  <meta property="og:description" content="While reactive control reacts to sensor data, a deliberative control senses first, plans, and then executes the plan. The output of each step becomes the input of the following step.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-25T02:02:49+07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/modules/3/deliberative.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AWS",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Course 0: Fundamentals of Robotics Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Course 0: Fundamentals of Robotics
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Syllabus</a>
+            </li><li class="masthead__menu-item">
+              <a href="/modules/index.html">Modules</a>
+            </li><li class="masthead__menu-item">
+              <a href="/additional-resources.html">Additional resources</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Course Introduction</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/0/motivation.html">Motivation</a></li>
+          
+            <li><a href="/modules/0/objectives.html">Course objectives</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 1 - Robot definition and components</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/1/robot-definition.html">Robot definition</a></li>
+          
+            <li><a href="/modules/1/robot-action.html">Robot actuators and effectors</a></li>
+          
+            <li><a href="/modules/1/robot-sensors.html">Robot sensors</a></li>
+          
+            <li><a href="/modules/1/robot-computer.html">Robot computation and communication</a></li>
+          
+            <li><a href="/modules/1/robot-design.html">Robot design</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 2 - Robotics fundamental problems</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/2/robot-problems.html">Robotic fundamental problems</a></li>
+          
+            <li><a href="/modules/2/models.html">Models</a></li>
+          
+            <li><a href="/modules/2/sensing.html">Sensing</a></li>
+          
+            <li><a href="/modules/2/planning.html">Planning</a></li>
+          
+            <li><a href="/modules/2/future-robotics.html">Future of robotics</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Module 3 - Robotics software architecture</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/modules/3/robot-architecture.html">Robot architecture</a></li>
+          
+            <li><a href="/modules/3/reactive.html">Reactive control</a></li>
+          
+            <li><a href="/modules/3/deliberative.html" class="active">Deliberative control</a></li>
+          
+            <li><a href="/modules/3/hybrid.html">Hybrid control</a></li>
+          
+            <li><a href="/modules/3/middleware.html">Middleware</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">End of the course and additional resources</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/additional-resources.html">Additional resources</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Deliberative control">
+    <meta itemprop="description" content="While reactive control reacts to sensor data, a deliberative control senses first, plans, and then executes the plan. The output of each step becomes the input of the following step.">
+    <meta itemprop="datePublished" content="2020-11-25T02:02:49+07:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Deliberative control
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>While reactive control reacts to sensor data, a <strong>deliberative control</strong> senses first, plans, and then executes the plan. The output of each step becomes the input of the following step.</p>
+
+<figure class="image-container" style="">
+  <img src="/img/0-sense-plan-act.svg" alt="Sense plan act architecture." />
+  <figcaption>Sense plan act architecture.</figcaption>
+</figure>
+
+<p>In this architecture, it is fundamental that the robot has all the elements we have seen in the previous module: localization, mapping, planning, and control. With the information about its state and the environment, the robot can predict future action outcomes and find a path using any of the techniques already seen, such as A*. This system can work, in controlled scenarios. In industrial scenarios, for example, a robot manipulator with very precise encoders and motors needs to grasp objects and drop them in a bin, both of them in predefined places.</p>
+
+<p>In general, purely deliberative systems are not used in practice. First, there is a <strong>time-scale</strong> issue: planning in large state spaces can take a very long time. This is typically the case in practice, which suggests that an open loop control, where the robot replans rarely, is preferable. However, we have already seen the issues of an open loop control: sensors and actuators are affected by noise and inaccuracies, and models are an approximation of the real world. This might result in the robot not accurately executing each step of the plan.
+Second, while information is assumed to be up-to-date when the planner searches for a plan, it might not be the case. In practice, environments are dynamic – for example, a robot might plan considering that a door is open, when it is actually locked. The more information, the better, but this is in conflict with the first issue.
+Third, representing the state space necessary for planning (localization and mapping) might require large memory storage. RAM is limited on a computer, especially on small embedded systems, and some of the planning algorithms can be very <strong>memory-intensive</strong>.</p>
+
+<p>Let’s go ahead and see the architecture of practical systems, using <a href="/modules/3/hybrid.html">hybrid architecture</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-25T02:02:49+07:00">November 25, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/modules/3/reactive.html" class="pagination--pager" title="Reactive control
+">Previous</a>
+    
+    
+      <a href="/modules/3/hybrid.html" class="pagination--pager" title="Hybrid control
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+            <hr>
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. // SPDX-License-Identifier: CC-BY-SA-4.0
+      </footer>
+    </div>
+
+      </footer>
+    </div>
+
+    <!-- https://github.com/mmistakes/minimal-mistakes/blob/master/_includes/scripts.html -->
+
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+   MathJax.Hub.Config({
+     extensions: ["tex2jax.js"],
+     jax: ["input/TeX", "output/HTML-CSS"],
+     tex2jax: {
+       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEscapes: true
+     },
+     "HTML-CSS": { availableFonts: ["TeX"] }
+   });
+</script>
+
+
+  </body>
+</html>

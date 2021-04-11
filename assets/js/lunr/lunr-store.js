@@ -1,6 +1,6 @@
 var store = [{
         "title": "Modules",
-        "excerpt":"This course contains the following modules:              Motivation          Course objectives          Robot Definition          Robot Actuators and Effectors          Robot Sensors          Robot Computation and Communication          Robot Design          Robotic Fundamental Problems          Physical models          Sensing          Planning          Future of Robotics          Robot Architecture          Reactive control          Deliberative control          Hybrid control          Middleware      ","categories": [],
+        "excerpt":"This course contains the following modules: Motivation Course objectives Robot Definition Robot Actuators and Effectors Robot Sensors Robot Computation and Communication Robot Design Assessment for Module 1 - Robot Definition and Components Robotic Fundamental Problems Physical models Sensing Planning Future of Robotics Assessment for Module 2 - Fundamental computational problems...","categories": [],
         "tags": [],
         "url": "/modules/index.html",
         "teaser": null
@@ -47,6 +47,12 @@ var store = [{
         "url": "/modules/1/robot-design.html",
         "teaser": null
       },{
+        "title": "Assessment for Module 1 - Robot Definition and Components",
+        "excerpt":"Robot Definition and Components This assignment is to help you self-assess your comprehension on the robot components. Read carefully each question. Once answered, you will receive feedback. Good luck! Q1 According to the current definition, a robot is 1. a reprogrammable, multifunctional manipulator designed to move material, parts, tools, or...","categories": [],
+        "tags": [],
+        "url": "/modules/1/assessment.html",
+        "teaser": null
+      },{
         "title": "Robotic Fundamental Problems",
         "excerpt":"How do we make a physical robot, seen in the previous module, autonomous? There are some fundamental problems that robotics software need to address: Models, i.e., the study of the motion, without forces. Sensing, i.e., perceive the surrounding. Planning, i.e., decide how to achieve a goal within the environment; a...","categories": [],
         "tags": [],
@@ -77,6 +83,12 @@ var store = [{
         "url": "/modules/2/future-robotics.html",
         "teaser": null
       },{
+        "title": "Assessment for Module 2 - Fundamental computational problems",
+        "excerpt":"Fundamental computational problems This assignment is to help you self-assess your comprehension on the robot fundamental computational problems and approaches. Read carefully each question. Once answered, you will receive feedback. Good luck! Q1 The main elements for a kinematic model are: ____ state ____ action ____ forward kinematics ____ inverse...","categories": [],
+        "tags": [],
+        "url": "/modules/2/assessment.html",
+        "teaser": null
+      },{
         "title": "Robot Architecture",
         "excerpt":"In the first two modules, we have seen the robot hardware and the fundamental computational tasks that the robots need to solve together with some of the main algorithms. How do we combine all these different elements together to have an intelligent autonomous robot? How do we write software that...","categories": [],
         "tags": [],
@@ -105,5 +117,11 @@ var store = [{
         "excerpt":"We have seen different control architectures and how from the high-level perspective they should interact with each other. Robots are complex systems that involve a large number of individual components that need to share information with each other. Modularity and reusability are key features to enable widespread development and use,...","categories": [],
         "tags": [],
         "url": "/modules/3/middleware.html",
+        "teaser": null
+      },{
+        "title": "Assessment for Module 3 - Control architectures",
+        "excerpt":"Control architectures This assignment is to help you self-assess your comprehension on the robot control architectures. Read carefully each question. Once answered, you will receive feedback. Good luck! Q1 A middleware 1. provides message passing interface for inter-process communication. 2. is a driver for robotics sensors. 3. is a library...","categories": [],
+        "tags": [],
+        "url": "/modules/3/assessment.html",
         "teaser": null
       },]
